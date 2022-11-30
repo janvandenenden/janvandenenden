@@ -104,7 +104,7 @@ export default function Home() {
                     </Link>{" "}
                     I&apos;ve worked on recently or learn a bit more{" "}
                     <Link
-                      href="/portfolio"
+                      href="/about-me"
                       className="uppercase font-extrabold dark:text-emerald-600 cursor-pointer"
                     >
                       about me
@@ -112,9 +112,9 @@ export default function Home() {
                     .
                   </p>
                 </motion.div>
-                <div className="mt-8">
+                {/* <div className="mt-8">
                   <Nav />
-                </div>
+                </div> */}
               </div>
               <motion.div
                 className="order-first lg:order-last px-16 hidden md:px-36 lg:px-0 lg:grid"
@@ -127,9 +127,12 @@ export default function Home() {
                   alt="3d image of a developer"
                   width="300"
                   height="300"
-                  layout="responsive"
-                  className="w-full"
                   priority
+                  sizes="100vw"
+                  style={{
+                    width: "100%",
+                    height: "auto",
+                  }}
                 />
               </motion.div>
             </div>

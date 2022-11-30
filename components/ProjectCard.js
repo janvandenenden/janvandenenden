@@ -1,6 +1,7 @@
 import React, { useRef } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import Carousel from "framer-motion-carousel";
 import {
   SiJavascript,
   SiNextdotjs,
@@ -10,13 +11,20 @@ import {
   SiContentful,
   SiEthereum,
 } from "react-icons/si";
+import Slideshow from "./Slideshow";
 
 const ProjectCard = ({ projectInfo }) => {
   const GetTechIcons = () => {
     return projectInfo.tools.map((tool, index) => {
       switch (tool) {
         case "React":
-          return <SiReact key={index} className="text-3xl inline-block ml-6" />;
+          return (
+            <SiReact
+              title="React"
+              key={index}
+              className="text-3xl inline-block ml-6"
+            />
+          );
         case "Tailwind":
           return (
             <SiTailwindcss key={index} className="text-3xl inline-block ml-6" />
@@ -51,13 +59,29 @@ const ProjectCard = ({ projectInfo }) => {
       initial={{ scale: 1 }}
     >
       <div className="bg-slate-100 p-3 rounded-t">
-        <Image
-          src={projectInfo.images[0]}
-          alt={`mockup of ${projectInfo.name}`}
-          layout="responsive"
-          width="200"
-          height="200"
-        />
+        <Carousel
+          interval="5000"
+          renderArrowLeft={() => null}
+          renderArrowRight={() => null}
+        >
+          {projectInfo.images.map((item, index) => {
+            return (
+              <Image
+                key={index}
+                src={item}
+                draggable={false}
+                alt={`mockup of ${projectInfo.name}`}
+                width="200"
+                height="200"
+                sizes="100vw"
+                style={{
+                  width: "100%",
+                  height: "auto",
+                }}
+              />
+            );
+          })}
+        </Carousel>
       </div>
       <div className="pt-6 px-2 md:px-4 relative flex flex-col h-full">
         <h1 className="font-extrabold">{projectInfo.name}</h1>

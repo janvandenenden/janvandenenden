@@ -44,6 +44,13 @@ const projects = [
     url: "https://rarefolknft.com",
     tools: ["React", "Next.js", "Bootstrap", "Ethereum"],
   },
+  {
+    name: "Yannick Joos",
+    description: "lol",
+    images: ["/rare-folk.png", "/mockup-mark.png"],
+    url: "https://yannickjoos.com",
+    tools: ["React", "Next.js", "Bootstrap"],
+  },
 ];
 
 export default function Portfolio() {

@@ -8,13 +8,13 @@ const Nav = () => {
   console.log(router);
   return (
     <>
-      <nav className="dark:text-white mt-auto flex flex-col bg-transparent py-5 w-full">
+      <nav className="dark:text-white mt-auto flex flex-col bg-transparent py-5 w-full items-start">
         <Link
           className={`${
             router.pathname == "/"
-              ? "line-through font-extrabold italic"
-              : "text-slate-200 font-light"
-          } uppercase mb-1 md:mb-3   `}
+              ? "line-through font-extrabold italic text-blue-900 dark:text-emerald-600"
+              : "dark:text-emerald-600 font-light text-blue-900"
+          } uppercase mb-1 md:mb-3 `}
           href="/"
         >
           Home
@@ -22,9 +22,9 @@ const Nav = () => {
         <Link
           className={`${
             router.pathname == "/portfolio"
-              ? "line-through font-extrabold italic text-white"
-              : "text-slate-200 font-light"
-          } uppercase mb-1 md:mb-3   `}
+              ? "line-through font-extrabold italic text-blue-900 dark:text-emerald-600"
+              : "dark:text-emerald-600 font-light text-blue-900"
+          } uppercase mb-1 md:mb-3`}
           href="/portfolio"
         >
           Portfolio
@@ -32,9 +32,9 @@ const Nav = () => {
         <Link
           className={`${
             router.pathname == "/about-me"
-              ? "line-through font-extrabold italic"
-              : "text-slate-200 font-light"
-          } uppercase mb-1 md:mb-3   `}
+              ? "line-through font-extrabold italic text-blue-900 dark:text-emerald-600"
+              : "dark:text-emerald-600 font-light text-blue-900"
+          } uppercase mb-1 md:mb-3 block`}
           href="/about-me"
         >
           About me
