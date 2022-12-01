@@ -1,15 +1,14 @@
 import Head from "next/head";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { FiChevronsLeft } from "react-icons/fi";
+import Nav from "../components/Nav";
 
-import Connect from "../components/Connect";
 import ProjectCard from "../components/ProjectCard";
 
 const variants = {
   hidden: { opacity: 0 },
   enter: { opacity: 1 },
-  exit: { opacity: 0, x: "100vw" },
+  exit: { opacity: 0 },
 };
 
 const projects = [
@@ -17,7 +16,7 @@ const projects = [
     name: "Mockup Mark",
     description:
       "An online mockup generator that allows you to create and download high-quality apparel mockups right in your browser.",
-    image: "/mockup-mark.png",
+    images: ["/mockup-mark.png", "/mockup-mark.png"],
     url: "https://mockupmark.com",
     tools: ["React", "Next.js", "Bootstrap"],
   },
@@ -25,7 +24,7 @@ const projects = [
     name: "Supermeme",
     description:
       "Create your own Supreme T-Shirt in seconds that gets delivered to your doorstep",
-    image: "/supermeme.png",
+    images: ["/supermeme.png", "/mockup-mark.png"],
     url: "https://supermeme.co",
     tools: ["React", "Bootstrap"],
   },
@@ -33,7 +32,7 @@ const projects = [
     name: "NFT Snapshot",
     description:
       "Take a snapshot of NFT token holders on the Ethereum and Polygon blockchain",
-    image: "/nftsnapshot.png",
+    images: ["/nftsnapshot.png", "/mockup-mark.png"],
     url: "https://nftsnapshot.io",
     tools: ["React", "Next.js", "Tailwind"],
   },
@@ -41,15 +40,22 @@ const projects = [
     name: "Rare Folk",
     description:
       "Rare Folk is a series of programmatically generated characters based on the ERC-721 standard and consists of 10,000 non-fungible tokens on the Ethereum blockchain.",
-    image: "/rare-folk.png",
+    images: ["/rare-folk.png", "/mockup-mark.png"],
     url: "https://rarefolknft.com",
+    tools: ["React", "Next.js", "Bootstrap", "Ethereum"],
+  },
+  {
+    name: "Yannick Joos",
+    description: "lol",
+    images: ["/rare-folk.png", "/mockup-mark.png"],
+    url: "https://yannickjoos.com",
     tools: ["React", "Next.js", "Bootstrap"],
   },
 ];
 
 export default function Portfolio() {
   return (
-    <div className="bg-slate-900 overflow-hidden">
+    <div className=" bg-slate-700 overflow-hidden">
       <Head>
         <title>Jan Van den Enden</title>
         <meta name="description" content="Website of Jan Van den Enden" />
@@ -62,8 +68,8 @@ export default function Portfolio() {
         initial="hidden" // Set the initial state to variants.hidden
         animate="enter" // Animated state to variants.enter
         exit="exit" // Exit state (used later) to variants.exit
-        transition={{ duration: 1.5 }}
-        className="min-h-screen  text-white"
+        transition={{ duration: 2.5 }}
+        className="min-h-screen dark:text-white text-blue-900 bg-gradient-to-r from-[#f1efda] to-[#e0cdc6] dark:to-slate-800 dark:from-gray-800"
       >
         <div className="container mx-auto h-full">
           <div className="h-full w-full flex flex-col">
@@ -73,11 +79,15 @@ export default function Portfolio() {
                   initial={{ x: "-100vw" }}
                   animate={{ x: 0 }}
                   transition={{ duration: 1.5 }}
-                  className="text-5xl font-extrabold my-4"
+                  className="text-5xl font-extrabold my-4 md:text-5xl lg:text-7xl xl:text-8xl"
                 >
-                  Portfolio
+                  Projects
                 </motion.h1>
-                <motion.div
+                <div className="ml-auto my-auto">
+                  <Nav />
+                </div>
+
+                {/* <motion.div
                   className="ml-auto"
                   initial={{ x: "100vw" }}
                   animate={{ x: 0 }}
@@ -90,30 +100,18 @@ export default function Portfolio() {
                     <FiChevronsLeft className="text-xl font-thin inline mr-2" />{" "}
                     <span>Back</span>
                   </Link>
-                </motion.div>
+                </motion.div> */}
               </div>
+
               {/* HERO TEXT */}
-
-              {projects.map((project, index) => {
-                return <ProjectCard key={index} projectInfo={project} />;
-              })}
-
-              {/* LETS CONNECT SECTION */}
-              <Connect />
-            </div>
-            <div className="mt-auto p-2">
-              <ul>
-                <li>
-                  <Link href="/">Portfolio</Link>
-                </li>
-                <li>
-                  <Link href="/">About me</Link>
-                </li>
-              </ul>
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 md:gap-8 py-3 md:py-5">
+                {projects.map((project, index) => {
+                  return <ProjectCard key={index} projectInfo={project} />;
+                })}
+              </div>
             </div>
           </div>
         </div>
-        <Link href="/">Back</Link>
       </motion.main>
     </div>
   );
