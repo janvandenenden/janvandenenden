@@ -86,11 +86,12 @@ export default function aboutMe() {
               </div>
               <div className="p-12 ">
                 <Image
-                  src="/about-me-4.png"
+                  src="/about-me-6.png
+                  "
                   width="800"
                   height="800"
                   alt="portrait of Jan"
-                  className="filter dark:hue-rotate-180  contrast-75 opacity-90 rounded-2xl shadow-xl "
+                  className="filter dark:hue-rotate-180  contrast-75 opacity-90 rounded-2xl  "
                 />
               </div>
             </div>
