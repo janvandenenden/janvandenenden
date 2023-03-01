@@ -29,15 +29,6 @@ a {
   }
 }
 
-.example-container {
-  width: 100vw;
-  height: 100vh;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .next,
 .prev {
   top: calc(50% - 20px);

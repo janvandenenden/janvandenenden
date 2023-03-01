@@ -58,8 +58,9 @@ const ProjectCard = ({ projectInfo }) => {
       whileHover={{ scale: 0.98 }}
       initial={{ scale: 1 }}
     >
-      <div className="bg-slate-100 p-3 rounded-t">
+      <div className="bg-slate-100 p-3 rounded-t ">
         <Carousel
+          autoPlay={false}
           interval="5000"
           renderArrowLeft={() => null}
           renderArrowRight={() => null}
@@ -74,6 +75,7 @@ const ProjectCard = ({ projectInfo }) => {
                 width="200"
                 height="200"
                 sizes="100vw"
+                className="aspect-[3/2]"
                 style={{
                   width: "100%",
                   height: "auto",
@@ -88,7 +90,7 @@ const ProjectCard = ({ projectInfo }) => {
         <p className="text-sm mb-8">{projectInfo.description}</p>
         <div className="mt-auto flex items-center">
           <a
-            className="px-4 my-2 block py-1 text-sm text-center bg-blue-900 text-white dark:bg-emerald-600 rounded cursor-pointer mr-auto"
+            className="px-4 my-2 block py-1 text-sm text-center bg-blue-900 text-white dark:bg-emerald-600 hover:dark:bg-emerald-500 rounded cursor-pointer mr-auto"
             href={projectInfo.url}
             target="_blank"
             rel="noreferrer"

@@ -5,7 +5,6 @@ import { useRouter } from "next/router";
 
 const Nav = () => {
   const router = useRouter();
-  console.log(router);
   return (
     <>
       <nav className="dark:text-white mt-auto flex flex-col bg-transparent py-5 w-full items-start">

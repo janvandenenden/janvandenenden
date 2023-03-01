@@ -3,7 +3,6 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import Nav from "../components/Nav";
 import Image from "next/image";
-import Slideshow from "../components/Slideshow";
 const variants = {
   hidden: { opacity: 0 },
   enter: { opacity: 1 },
@@ -28,74 +27,46 @@ export default function aboutMe() {
         transition={{ duration: 2.5 }}
         className="min-h-screen dark:text-white text-blue-900 bg-gradient-to-r from-[#f1efda] to-[#e0cdc6] dark:to-slate-800 dark:from-gray-800"
       >
-        <div className="container mx-auto h-full">
+        <div className="container mx-auto h-full px-4">
           <div className="h-full w-full flex flex-col">
             <div className="w-full h-full p-2 my-auto overflow-hidden">
               <div className="flex items-center">
-                <div className="ml-auto my-auto">
-                  <Nav />
-                </div>
-              </div>
-            </div>
-            <div className="grid md:grid-cols-2  items-center">
-              <div className="font-thin text-lg">
                 <motion.h1
                   initial={{ x: "-100vw" }}
                   animate={{ x: 0 }}
                   transition={{ duration: 1.5 }}
                   className="text-5xl font-extrabold my-4 md:text-5xl lg:text-7xl xl:text-8xl"
                 >
-                  About me
+                  About Me
                 </motion.h1>
+                <div className="ml-auto my-auto">
+                  <Nav />
+                </div>
+              </div>
+            </div>
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <div className="font-thin text-lg">
                 <p className="mb-3">
-                  I am a front end developer and project manager with hands-on
-                  experience building user-friendly digital products. I am
-                  interested in blockchain technology and DeFi, and have
-                  experience working with JavaScript (ES6, React, Node.js) and
-                  CSS frameworks. I am skilled in version control with Git and
-                  have working knowledge of Solidity and smart contract
-                  functionality. I have also worked remotely in international
-                  teams and am familiar with agile methodologies.
+                  I am a social scientist turned developer from Belgium.
+                  I&apos;ve co-founded Mockup Mark, an apparel mockup generator
+                  and more recently I&apos;ve been dabbling in all that is Web3.
                 </p>
                 <p className="mb-3">
-                  I consider myself a generalist with a curious nature. I enjoy
-                  learning and trying new things, and I believe this has helped
-                  me to develop a broad range of skills and experiences. I am
-                  always looking for ways to improve and grow, and I am open to
-                  new challenges and opportunities.
-                </p>
-                <p className="mb-3">
-                  My most recent venture is Mockup Mark, an apparel mockup
-                  generator that I co-founded. I was responsible for designing
-                  the UI, gathering user feedback, and optimizing the search
-                  engine ranking. Before that, I worked as a web dev coach at
-                  BeCode, where I helped a diverse group of learners gain the
-                  necessary skills to land their first job in web development.
-                  Earlier in my career, I worked as a project manager at Helion
-                  Research, where I was responsible for designing
-                  questionnaires, monitoring fieldwork, and conducting data
-                  analysis and presentation.
-                </p>
-                <p className="mb-3">
-                  I am currently looking for work opportunities where I can use
-                  my skills and experience to build cutting-edge web
-                  applications. I can be reached at jan@enden.be and my GitHub
-                  profile can be found at https://github.com/janvandenenden. I
-                  can also be reached by phone at +32485042624.
+                  Currently I&apos;m looking for a new professional adventure.
+                  You can find my resume here and reach me at jan@enden.be.
                 </p>
               </div>
-              <div className="p-12 ">
+
+              <div>
                 <Image
-                  src="/about-me-6.png
-                  "
+                  src="/about-me-4.png"
                   width="800"
                   height="800"
                   alt="portrait of Jan"
-                  className="filter dark:hue-rotate-180  contrast-75 opacity-90 rounded-2xl  "
+                  className="filter dark:hue-rotate-180  contrast-75 opacity-90 rounded-2xl"
                 />
               </div>
             </div>
-            <Slideshow />
           </div>
         </div>
       </motion.main>

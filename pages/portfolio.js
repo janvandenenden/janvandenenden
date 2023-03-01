@@ -16,7 +16,7 @@ const projects = [
     name: "Mockup Mark",
     description:
       "An online mockup generator that allows you to create and download high-quality apparel mockups right in your browser.",
-    images: ["/mockup-mark.png", "/mockup-mark.png"],
+    images: ["/mockup-mark.png", "/mockup-mark.png", "/mockup-mark.png"],
     url: "https://mockupmark.com",
     tools: ["React", "Next.js", "Bootstrap"],
   },
@@ -63,15 +63,14 @@ export default function Portfolio() {
       </Head>
 
       <motion.main
-        variant={variants}
         variants={variants} // Pass the variant object into Framer Motion
         initial="hidden" // Set the initial state to variants.hidden
         animate="enter" // Animated state to variants.enter
         exit="exit" // Exit state (used later) to variants.exit
         transition={{ duration: 2.5 }}
-        className="min-h-screen dark:text-white text-blue-900 bg-gradient-to-r from-[#f1efda] to-[#e0cdc6] dark:to-slate-800 dark:from-gray-800"
+        className="h-full overflow-scroll dark:text-white text-blue-900 bg-gradient-to-r from-[#f1efda] to-[#e0cdc6] dark:to-slate-800 dark:from-gray-800"
       >
-        <div className="container mx-auto h-full">
+        <div className="container mx-auto h-full px-4">
           <div className="h-full w-full flex flex-col">
             <div className="w-full h-full p-2 my-auto overflow-hidden">
               <div className="flex items-center">
@@ -86,21 +85,6 @@ export default function Portfolio() {
                 <div className="ml-auto my-auto">
                   <Nav />
                 </div>
-
-                {/* <motion.div
-                  className="ml-auto"
-                  initial={{ x: "100vw" }}
-                  animate={{ x: 0 }}
-                  transition={{ duration: 1.5 }}
-                >
-                  <Link
-                    href="/"
-                    className=" text-white text-sm font-thin flex items-center"
-                  >
-                    <FiChevronsLeft className="text-xl font-thin inline mr-2" />{" "}
-                    <span>Back</span>
-                  </Link>
-                </motion.div> */}
               </div>
 
               {/* HERO TEXT */}
