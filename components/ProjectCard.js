@@ -27,27 +27,51 @@ const ProjectCard = ({ projectInfo }) => {
           );
         case "Tailwind":
           return (
-            <SiTailwindcss key={index} className="text-3xl inline-block ml-6" />
+            <SiTailwindcss
+              title="Tailwind"
+              key={index}
+              className="text-3xl inline-block ml-6"
+            />
           );
         case "Bootstrap":
           return (
-            <SiBootstrap key={index} className="text-3xl inline-block ml-6" />
+            <SiBootstrap
+              title="Bootstrap"
+              key={index}
+              className="text-3xl inline-block ml-6"
+            />
           );
         case "Next.js":
           return (
-            <SiNextdotjs key={index} className="text-3xl inline-block ml-6" />
+            <SiNextdotjs
+              title="Next.JS"
+              key={index}
+              className="text-3xl inline-block ml-6"
+            />
           );
         case "Contentful":
           return (
-            <SiContentful key={index} className="text-3xl inline-block ml-6" />
+            <SiContentful
+              title="Contentful"
+              key={index}
+              className="text-3xl inline-block ml-6"
+            />
           );
         case "Javascript":
           return (
-            <SiJavascript key={index} className="text-3xl inline-block ml-6" />
+            <SiJavascript
+              title="JavaScript"
+              key={index}
+              className="text-3xl inline-block ml-6"
+            />
           );
         case "Ethereum":
           return (
-            <SiEthereum key={index} className="text-3xl inline-block ml-6" />
+            <SiEthereum
+              title="Ethereum"
+              key={index}
+              className="text-3xl inline-block ml-6"
+            />
           );
       }
     });
