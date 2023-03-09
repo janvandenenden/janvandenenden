@@ -7,12 +7,12 @@ const Nav = () => {
   const router = useRouter();
   return (
     <>
-      <nav className="dark:text-white mt-auto flex flex-col bg-transparent py-5 w-full items-start">
+      <nav className="dark:text-white mt-auto flex flex-col bg-transparent py-5 w-full items-end">
         <Link
           className={`${
             router.pathname == "/"
-              ? "line-through font-extrabold italic text-blue-900 dark:text-emerald-600"
-              : "dark:text-emerald-600 font-light text-blue-900"
+              ? "line-through font-extrabold italic text-indigo-900 dark:text-indigo-600"
+              : "dark:text-white font-light text-indigo-900"
           } uppercase mb-1 md:mb-3 `}
           href="/"
         >
@@ -20,19 +20,19 @@ const Nav = () => {
         </Link>
         <Link
           className={`${
-            router.pathname == "/portfolio"
-              ? "line-through font-extrabold italic text-blue-900 dark:text-emerald-600"
-              : "dark:text-emerald-600 font-light text-blue-900"
+            router.pathname == "/projects"
+              ? "line-through font-extrabold italic text-indigo-900 dark:text-indigo-600"
+              : "dark:text-white font-light text-indigo-900"
           } uppercase mb-1 md:mb-3`}
-          href="/portfolio"
+          href="/projects"
         >
-          Portfolio
+          Projects
         </Link>
         <Link
           className={`${
             router.pathname == "/about-me"
-              ? "line-through font-extrabold italic text-blue-900 dark:text-emerald-600"
-              : "dark:text-emerald-600 font-light text-blue-900"
+              ? "line-through font-extrabold italic text-indigo-900 dark:text-indigo-600"
+              : "dark:text-white font-light text-indigo-900"
           } uppercase mb-1 md:mb-3 block`}
           href="/about-me"
         >

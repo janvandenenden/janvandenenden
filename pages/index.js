@@ -6,38 +6,25 @@ import { DiGithubAlt } from "react-icons/di";
 import { FaLinkedinIn } from "react-icons/fa";
 import Link from "next/link";
 import useWindowSize from "../hooks/useWindowSize";
-import { useRouter } from "next/router";
-const variants = {
-  hidden: { opacity: 0 },
-  enter: { opacity: 1 },
-  exit: { opacity: 0, x: "100vw" },
-};
-
-import Nav from "../components/Nav";
 
 export default function Home() {
   const size = useWindowSize();
-  console.log(size);
   return (
-    <div className="bg-slate-700">
+    <div>
       <Head>
-        <title>Jan Van den Enden</title>
-        <meta name="description" content="Website of Jan Van den Enden" />
-        <link rel="icon" href="/favicon.ico" />
+        <title>Jan Van den Enden | Digital Developer</title>
+        <meta
+          name="description"
+          content="Hi! I'm Jan, a social scientist turned developer. I'm experienced in building customer-facing SaaS, websites and setting up lean business operations."
+        />
       </Head>
-      <motion.main
-        variants={variants} // Pass the variant object into Framer Motion
-        initial="hidden" // Set the initial state to variants.hidden
-        animate="enter" // Animated state to variants.enter
-        exit="exit" // Exit state (used later) to variants.exit
-        transition={{ type: "linear", duration: 2.5 }}
+      <main
         style={{ minHeight: `${size.height}px` }}
-        className="flex items-center dark:text-white text-blue-900 bg-gradient-to-r from-[#ebe8d1] to-[#f7cccc] dark:to-slate-800 dark:from-gray-800"
+        className="flex items-center"
       >
         <div className="container h-full mx-auto flex items-center px-4">
           <div className="grid grid-cols-1  lg:grid-cols-2">
             <div className="w-full flex flex-col my-auto order-last lg:order-first ">
-              {/* HERO TEXT */}
               <motion.h1
                 initial={{ x: "-100vw" }}
                 animate={{ x: 0 }}
@@ -45,7 +32,10 @@ export default function Home() {
                 className="text-5xl font-extrabold my-4 md:text-5xl lg:text-7xl xl:text-8xl"
                 exit={{ opacity: 0 }}
               >
-                Hi, I am Jan
+                Hi, I am{" "}
+                <span className="font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-indigo-600">
+                  Jan
+                </span>
               </motion.h1>
 
               <motion.div
@@ -67,7 +57,7 @@ export default function Home() {
                     href="mailto:jan@enden.be"
                     rel="noreferrer"
                     target="_blank"
-                    className="bg-white dark:bg-emerald-600 hover:dark:bg-emerald-500 shadow-xl flex items-center text-xl py-2 cursor-pointer dark:text-white px-6 mr-6  rounded font-extrabold "
+                    className="bg-white dark:bg-indigo-600 hover:text-indigo-700 hover:dark:text-white hover:dark:bg-indigo-500 shadow-xl flex items-center text-xl py-2 cursor-pointer dark:text-white px-6 mr-6  rounded font-extrabold "
                   >
                     <MdOutlineMail className="text-2xl  mr-3 dark:hover:text-white" />
                     Let&apos;s talk
@@ -79,7 +69,7 @@ export default function Home() {
                     href="https://github.com/janvandenenden"
                     rel="noreferrer"
                     target="_blank"
-                    className="bg-white shadow-xl dark:bg-emerald-600 hover:dark:bg-emerald-500 cursor-pointer dark:text-white rounded text-xl mr-6 "
+                    className="bg-white shadow-xl hover:text-indigo-700 hover:dark:text-white dark:bg-indigo-600 hover:dark:bg-indigo-500 cursor-pointer dark:text-white rounded text-xl mr-6 "
                   >
                     <DiGithubAlt className="text-5xl p-1" />
                   </motion.a>
@@ -91,7 +81,7 @@ export default function Home() {
                     href="https://www.linkedin.com/in/jan-van-den-enden-410b7820/"
                     rel="noreferrer"
                     target="_blank"
-                    className="bg-white shadow-xl dark:bg-emerald-600 hover:dark:bg-emerald-500 cursor-pointer dark:text-white rounded text-xl mr-6  "
+                    className="bg-white shadow-xl hover:text-indigo-700 hover:dark:text-white dark:bg-indigo-600 hover:dark:bg-indigo-500 cursor-pointer dark:text-white rounded text-xl mr-6  "
                   >
                     <FaLinkedinIn className="text-5xl p-2" />
                   </motion.a>
@@ -100,15 +90,15 @@ export default function Home() {
                 <p className="mt-8 font-thin">
                   Check some fun{" "}
                   <Link
-                    href="/portfolio"
-                    className="uppercase font-extrabold dark:text-emerald-600 hover:dark:text-emerald-500 cursor-pointer"
+                    href="/projects"
+                    className="uppercase font-extrabold hover:text-indigo-700 dark:text-indigo-600 hover:dark:text-indigo-500 cursor-pointer"
                   >
                     projects
                   </Link>{" "}
                   I&apos;ve worked on recently or learn a bit more{" "}
                   <Link
                     href="/about-me"
-                    className="uppercase font-extrabold dark:text-emerald-600 hover:dark:text-emerald-500 cursor-pointer"
+                    className="uppercase font-extrabold hover:text-indigo-700 dark:text-indigo-600 hover:dark:text-indigo-500 cursor-pointer"
                   >
                     about me
                   </Link>
@@ -136,7 +126,7 @@ export default function Home() {
             </motion.div>
           </div>
         </div>
-      </motion.main>
+      </main>
     </div>
   );
 }

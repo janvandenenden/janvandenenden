@@ -11,7 +11,6 @@ import {
   SiContentful,
   SiEthereum,
 } from "react-icons/si";
-import Slideshow from "./Slideshow";
 
 const ProjectCard = ({ projectInfo }) => {
   const GetTechIcons = () => {
@@ -22,7 +21,7 @@ const ProjectCard = ({ projectInfo }) => {
             <SiReact
               title="React"
               key={index}
-              className="text-3xl inline-block ml-6"
+              className="text-2xl inline-block ml-6"
             />
           );
         case "Tailwind":
@@ -30,7 +29,7 @@ const ProjectCard = ({ projectInfo }) => {
             <SiTailwindcss
               title="Tailwind"
               key={index}
-              className="text-3xl inline-block ml-6"
+              className="text-2xl inline-block ml-6"
             />
           );
         case "Bootstrap":
@@ -38,7 +37,7 @@ const ProjectCard = ({ projectInfo }) => {
             <SiBootstrap
               title="Bootstrap"
               key={index}
-              className="text-3xl inline-block ml-6"
+              className="text-2xl inline-block ml-6"
             />
           );
         case "Next.js":
@@ -46,7 +45,7 @@ const ProjectCard = ({ projectInfo }) => {
             <SiNextdotjs
               title="Next.JS"
               key={index}
-              className="text-3xl inline-block ml-6"
+              className="text-2xl inline-block ml-6"
             />
           );
         case "Contentful":
@@ -54,7 +53,7 @@ const ProjectCard = ({ projectInfo }) => {
             <SiContentful
               title="Contentful"
               key={index}
-              className="text-3xl inline-block ml-6"
+              className="text-2xl inline-block ml-6"
             />
           );
         case "Javascript":
@@ -62,7 +61,7 @@ const ProjectCard = ({ projectInfo }) => {
             <SiJavascript
               title="JavaScript"
               key={index}
-              className="text-3xl inline-block ml-6"
+              className="text-2xl inline-block ml-6"
             />
           );
         case "Ethereum":
@@ -70,7 +69,7 @@ const ProjectCard = ({ projectInfo }) => {
             <SiEthereum
               title="Ethereum"
               key={index}
-              className="text-3xl inline-block ml-6"
+              className="text-2xl inline-block ml-6"
             />
           );
       }
@@ -78,11 +77,11 @@ const ProjectCard = ({ projectInfo }) => {
   };
   return (
     <motion.div
-      className="card mb-4 bg-gradient-to-b from-neutral-100 to-zinc-200 text-slate-900 dark:from-neutral-700 dark:to-zinc-800 dark:text-white rounded-lg shadow-xl flex flex-col"
+      className="card mb-4 bg-gradient-to-b from-neutral-100 text-gray-900 dark:from-gray-800 dark:to-gray-800 dark:text-white rounded-lg shadow-xl flex flex-col"
       whileHover={{ scale: 0.98 }}
       initial={{ scale: 1 }}
     >
-      <div className="bg-slate-100 p-3 rounded-t ">
+      <div className="rounded-t">
         <Carousel
           autoPlay={false}
           interval="5000"
@@ -99,7 +98,7 @@ const ProjectCard = ({ projectInfo }) => {
                 width="200"
                 height="200"
                 sizes="100vw"
-                className="aspect-[3/2]"
+                className="aspect-[3/2] rounded-t"
                 style={{
                   width: "100%",
                   height: "auto",
@@ -109,12 +108,16 @@ const ProjectCard = ({ projectInfo }) => {
           })}
         </Carousel>
       </div>
-      <div className="pt-6 px-2 md:px-4 relative flex flex-col h-full">
-        <h1 className="font-extrabold">{projectInfo.name}</h1>
-        <p className="text-sm mb-8">{projectInfo.description}</p>
+      <div className="p-4 relative flex flex-col h-full">
+        <h1 className="font-extrabold dark:text-white text-black my-2">
+          {projectInfo.name}
+        </h1>
+        <p className="text-sm mb-8 dark:text-white text-gray-800">
+          {projectInfo.description}
+        </p>
         <div className="mt-auto flex items-center">
           <a
-            className="px-4 my-2 block py-1 text-sm text-center bg-blue-900 text-white dark:bg-emerald-600 hover:dark:bg-emerald-500 rounded cursor-pointer mr-auto"
+            className="px-4 my-2 block py-1 text-sm text-center bg-indigo-900 hover:bg-indigo-800 text-white dark:bg-indigo-600 hover:dark:bg-indigo-500 rounded cursor-pointer mr-auto"
             href={projectInfo.url}
             target="_blank"
             rel="noreferrer"

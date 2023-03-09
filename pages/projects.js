@@ -15,39 +15,55 @@ const projects = [
   {
     name: "Mockup Mark",
     description:
-      "An online mockup generator that allows you to create and download high-quality apparel mockups right in your browser.",
-    images: ["/mockup-mark.png", "/mockup-mark.png", "/mockup-mark.png"],
+      "Create and download high-quality apparel mockups right in your browser.",
+    images: ["/mockup-mark.jpg", "/mockup-mark-devices.jpg"],
     url: "https://mockupmark.com",
     tools: ["React", "Next.js", "Bootstrap"],
   },
   {
     name: "Supermeme",
     description:
-      "Create your own Supreme T-Shirt in seconds that gets delivered to your doorstep",
-    images: ["/supermeme.png", "/mockup-mark.png"],
+      "Create your own Supreme T-Shirt in seconds and get it delivered to your doorstep!",
+    images: ["/supermeme.jpg", "/supermeme-devices.jpg"],
     url: "https://supermeme.co",
     tools: ["React", "Bootstrap"],
+  },
+  {
+    name: "Mintboost",
+    description:
+      "Filter out wallets that are unlikely to convert and optimize your NFT project's allowlist.",
+    images: ["/mintboost.jpg", "/mintboost-devices.jpg"],
+    url: "https://mintboost.ai",
+    tools: ["React", "Tailwind", "Ethereum"],
   },
   {
     name: "NFT Snapshot",
     description:
       "Take a snapshot of NFT token holders on the Ethereum and Polygon blockchain",
-    images: ["/nftsnapshot.png", "/mockup-mark.png"],
+    images: ["/nftsnapshot.jpg", "/nft-snapshot-devices.jpg"],
     url: "https://nftsnapshot.io",
+    tools: ["React", "Next.js", "Tailwind"],
+  },
+  {
+    name: "NFT Refresh",
+    description:
+      "Update the metadata of your whole ERC-721 collection on Opensea. It is built using Alchemy, Ethers and the Opensea API.",
+    images: ["/nftrefresh.jpg", "/nftrefresh-device.jpg"],
+    url: "https://www.nftrefresh.xyz/",
     tools: ["React", "Next.js", "Tailwind"],
   },
   {
     name: "Rare Folk",
     description:
-      "Rare Folk is a series of programmatically generated characters based on the ERC-721 standard and consists of 10,000 non-fungible tokens on the Ethereum blockchain.",
-    images: ["/rare-folk.png", "/mockup-mark.png"],
+      "Programmatically generated characters based on the ERC-721 standard on the Ethereum blockchain.",
+    images: ["/rarefolk.jpg", "/rarefolk-devices.jpg"],
     url: "https://rarefolknft.com",
     tools: ["React", "Next.js", "Bootstrap", "Ethereum"],
   },
   {
     name: "Yannick Joos",
-    description: "lol",
-    images: ["/rare-folk.png", "/mockup-mark.png"],
+    description: "Website for stand up comedian Yannick Joos",
+    images: ["/yannick-joos.jpg", "/yannick-joos-devices.jpg"],
     url: "https://yannickjoos.com",
     tools: ["React", "Next.js", "Bootstrap"],
   },
@@ -55,24 +71,17 @@ const projects = [
 
 export default function Portfolio() {
   return (
-    <div className=" bg-slate-700 overflow-hidden">
+    <div className="overflow-hidden">
       <Head>
-        <title>Jan Van den Enden</title>
+        <title>Jan Van den Enden | Projects</title>
         <meta name="description" content="Website of Jan Van den Enden" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <motion.main
-        variants={variants} // Pass the variant object into Framer Motion
-        initial="hidden" // Set the initial state to variants.hidden
-        animate="enter" // Animated state to variants.enter
-        exit="exit" // Exit state (used later) to variants.exit
-        transition={{ duration: 2.5 }}
-        className="h-full overflow-scroll dark:text-white text-blue-900 bg-gradient-to-r from-[#f1efda] to-[#e0cdc6] dark:to-slate-800 dark:from-gray-800"
-      >
+      <main className="min-h-screen">
         <div className="container mx-auto h-full px-4">
           <div className="h-full w-full flex flex-col">
-            <div className="w-full h-full p-2 my-auto overflow-hidden">
+            <div className="w-full h-full my-auto overflow-hidden">
               <div className="flex items-center">
                 <motion.h1
                   initial={{ x: "-100vw" }}
@@ -96,7 +105,7 @@ export default function Portfolio() {
             </div>
           </div>
         </div>
-      </motion.main>
+      </main>
     </div>
   );
 }
