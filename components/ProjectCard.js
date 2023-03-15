@@ -77,7 +77,7 @@ const ProjectCard = ({ projectInfo }) => {
   };
   return (
     <motion.div
-      className="card mb-4 bg-gradient-to-b from-neutral-100 text-gray-900 dark:from-gray-800 dark:to-gray-800 dark:text-white rounded-lg shadow-xl flex flex-col"
+      className="card mb-4 bg-neutral-100 text-gray-900 dark:bg-gray-800 dark:text-white rounded-lg shadow-xl flex flex-col"
       whileHover={{ scale: 0.98 }}
       initial={{ scale: 1 }}
     >

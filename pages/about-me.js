@@ -1,13 +1,7 @@
 import Head from "next/head";
-import Link from "next/link";
 import { motion } from "framer-motion";
 import Nav from "../components/Nav";
 import Image from "next/image";
-const variants = {
-  hidden: { opacity: 0 },
-  enter: { opacity: 1 },
-  exit: { opacity: 0 },
-};
 
 export default function aboutMe() {
   return (
@@ -38,13 +32,39 @@ export default function aboutMe() {
             <div className="grid md:grid-cols-2 gap-12 items-center my-auto">
               <div className="font-light lg:text-2xl">
                 <p className="mb-3">
-                  I am a social scientist turned developer from Belgium.
-                  I&apos;ve co-founded Mockup Mark, an apparel mockup generator
-                  and more recently I&apos;ve been dabbling in all that is Web3.
+                  Hey there, I&apos;m a social scientist turned developer from
+                  Belgium.
                 </p>
                 <p className="mb-3">
-                  Currently I&apos;m looking for a new professional adventure.
-                  You can find my resume here and reach me at jan@enden.be.
+                  {" "}
+                  My go-to tools are React, Next.js, and Tailwind, and I love
+                  using Python to crunch data. Lately, I&apos;ve been diving
+                  into the wild world of Web3 and having a blast learning all
+                  about it.
+                </p>
+                <p className="mb-3">
+                  Currently, I&apos;m happily working on some exciting projects,
+                  but I&apos;m always open to new professional adventures. You
+                  can find{" "}
+                  <a
+                    href="/resume.pdf"
+                    download="Jan Van den Enden - Resume"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-bold"
+                  >
+                    my resume
+                  </a>{" "}
+                  here and reach me at{" "}
+                  <a
+                    href="mailto:jan@enden.be"
+                    rel="noreferrer"
+                    target="_blank"
+                    className=" font-extrabold "
+                  >
+                    jan@enden.be
+                  </a>
+                  .
                 </p>
               </div>
 

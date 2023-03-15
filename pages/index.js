@@ -6,6 +6,7 @@ import { DiGithubAlt } from "react-icons/di";
 import { FaLinkedinIn } from "react-icons/fa";
 import Link from "next/link";
 import useWindowSize from "../hooks/useWindowSize";
+import Nav from "../components/Nav";
 
 export default function Home() {
   const size = useWindowSize();
@@ -18,11 +19,17 @@ export default function Home() {
           content="Hi! I'm Jan, a social scientist turned developer. I'm experienced in building customer-facing SaaS, websites and setting up lean business operations."
         />
       </Head>
+
       <main
-        style={{ minHeight: `${size.height}px` }}
-        className="flex items-center"
+        style={{
+          minHeight: `${size.height}px`,
+        }}
+        className="container relative flex mx-auto px-4"
       >
-        <div className="container h-full mx-auto flex items-center px-4">
+        <div className="ml-auto absolute top-0 right-4">
+          <Nav />
+        </div>
+        <div className="h-full my-auto">
           <div className="grid grid-cols-1  lg:grid-cols-2">
             <div className="w-full flex flex-col my-auto order-last lg:order-first ">
               <motion.h1
@@ -86,23 +93,6 @@ export default function Home() {
                     <FaLinkedinIn className="text-5xl p-2" />
                   </motion.a>
                 </div>
-
-                <p className="mt-8 font-thin">
-                  Check some fun{" "}
-                  <Link
-                    href="/projects"
-                    className="uppercase font-extrabold hover:text-indigo-700 dark:text-indigo-600 hover:dark:text-indigo-500 cursor-pointer"
-                  >
-                    projects
-                  </Link>{" "}
-                  I&apos;ve worked on recently or learn a bit more{" "}
-                  <Link
-                    href="/about-me"
-                    className="uppercase font-extrabold hover:text-indigo-700 dark:text-indigo-600 hover:dark:text-indigo-500 cursor-pointer"
-                  >
-                    about me
-                  </Link>
-                </p>
               </motion.div>
             </div>
             <motion.div

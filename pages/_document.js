@@ -12,7 +12,7 @@ export default function Document() {
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
         <link
-          href="https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Mukta:wght@200;300;400;500;600;700;800&family=Tilt+Warp&display=swap"
           rel="stylesheet"
         ></link>
         <meta

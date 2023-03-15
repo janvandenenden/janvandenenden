@@ -1,15 +1,10 @@
 import Head from "next/head";
-import Link from "next/link";
 import { motion } from "framer-motion";
 import Nav from "../components/Nav";
+import useWindowSize from "../hooks/useWindowSize";
 
 import ProjectCard from "../components/ProjectCard";
-
-const variants = {
-  hidden: { opacity: 0 },
-  enter: { opacity: 1 },
-  exit: { opacity: 0 },
-};
+import bgImage from "../public/bg2.jpeg";
 
 const projects = [
   {
@@ -70,6 +65,8 @@ const projects = [
 ];
 
 export default function Portfolio() {
+  const size = useWindowSize();
+
   return (
     <div className="overflow-hidden">
       <Head>
@@ -78,7 +75,12 @@ export default function Portfolio() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="min-h-screen">
+      <main
+        style={{
+          minHeight: `${size.height}px`,
+        }}
+        className="flex items-center min-h-screen"
+      >
         <div className="container mx-auto h-full px-4">
           <div className="h-full w-full flex flex-col">
             <div className="w-full h-full my-auto overflow-hidden">
