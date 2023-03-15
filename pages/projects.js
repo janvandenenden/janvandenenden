@@ -2,16 +2,14 @@ import Head from "next/head";
 import { motion } from "framer-motion";
 import Nav from "../components/Nav";
 import useWindowSize from "../hooks/useWindowSize";
-
 import ProjectCard from "../components/ProjectCard";
-import bgImage from "../public/bg2.jpeg";
 
 const projects = [
   {
     name: "Mockup Mark",
     description:
       "Create and download high-quality apparel mockups right in your browser.",
-    images: ["/mockup-mark.jpg", "/mockup-mark-devices.jpg"],
+    images: ["/mockup-mark.webp", "/mockup-mark-devices.webp"],
     url: "https://mockupmark.com",
     tools: ["React", "Next.js", "Bootstrap"],
   },
@@ -19,7 +17,7 @@ const projects = [
     name: "Supermeme",
     description:
       "Create your own Supreme T-Shirt in seconds and get it delivered to your doorstep!",
-    images: ["/supermeme.jpg", "/supermeme-devices.jpg"],
+    images: ["/supermeme.webp", "/supermeme-devices.webp"],
     url: "https://supermeme.co",
     tools: ["React", "Bootstrap"],
   },
@@ -27,7 +25,7 @@ const projects = [
     name: "Mintboost",
     description:
       "Filter out wallets that are unlikely to convert and optimize your NFT project's allowlist.",
-    images: ["/mintboost.jpg", "/mintboost-devices.jpg"],
+    images: ["/mintboost.webp", "/mintboost-devices.webp"],
     url: "https://mintboost.ai",
     tools: ["React", "Tailwind", "Ethereum"],
   },
@@ -35,7 +33,7 @@ const projects = [
     name: "NFT Snapshot",
     description:
       "Take a snapshot of NFT token holders on the Ethereum and Polygon blockchain",
-    images: ["/nftsnapshot.jpg", "/nft-snapshot-devices.jpg"],
+    images: ["/nftsnapshot.webp", "/nft-snapshot-devices.webp"],
     url: "https://nftsnapshot.io",
     tools: ["React", "Next.js", "Tailwind"],
   },
@@ -43,7 +41,7 @@ const projects = [
     name: "NFT Refresh",
     description:
       "Update the metadata of your whole ERC-721 collection on Opensea. It is built using Alchemy, Ethers and the Opensea API.",
-    images: ["/nftrefresh.jpg", "/nftrefresh-device.jpg"],
+    images: ["/nftrefresh.webp", "/nftrefresh-device.webp"],
     url: "https://www.nftrefresh.xyz/",
     tools: ["React", "Next.js", "Tailwind"],
   },
@@ -51,14 +49,14 @@ const projects = [
     name: "Rare Folk",
     description:
       "Programmatically generated characters based on the ERC-721 standard on the Ethereum blockchain.",
-    images: ["/rarefolk.jpg", "/rarefolk-devices.jpg"],
+    images: ["/rarefolk.webp", "/rarefolk-devices.webp"],
     url: "https://rarefolknft.com",
     tools: ["React", "Next.js", "Bootstrap", "Ethereum"],
   },
   {
     name: "Yannick Joos",
     description: "Website for stand up comedian Yannick Joos",
-    images: ["/yannick-joos.jpg", "/yannick-joos-devices.jpg"],
+    images: ["/yannick-joos.webp", "/yannick-joos-devices.webp"],
     url: "https://yannickjoos.com",
     tools: ["React", "Next.js", "Bootstrap"],
   },
