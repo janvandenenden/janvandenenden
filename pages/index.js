@@ -76,6 +76,7 @@ export default function Home() {
                     href="https://github.com/janvandenenden"
                     rel="noreferrer"
                     target="_blank"
+                    title="Github"
                     className="bg-white shadow-xl hover:text-indigo-700 hover:dark:text-white dark:bg-indigo-600 hover:dark:bg-indigo-500 cursor-pointer dark:text-white rounded text-xl mr-6 "
                   >
                     <DiGithubAlt className="text-5xl p-1" />
@@ -88,6 +89,7 @@ export default function Home() {
                     href="https://www.linkedin.com/in/jan-van-den-enden-410b7820/"
                     rel="noreferrer"
                     target="_blank"
+                    title="LinkedIn"
                     className="bg-white shadow-xl hover:text-indigo-700 hover:dark:text-white dark:bg-indigo-600 hover:dark:bg-indigo-500 cursor-pointer dark:text-white rounded text-xl mr-6  "
                   >
                     <FaLinkedinIn className="text-5xl p-2" />
