@@ -48,9 +48,9 @@ export default function aboutMe() {
                   can find{" "}
                   <a
                     href="/resume.pdf"
-                    download="Jan Van den Enden - Resume"
+                    // download="Jan Van den Enden - Resume"
                     target="_blank"
-                    rel="noopener noreferrer"
+                    rel="noreferrer"
                     className="font-bold"
                   >
                     my resume

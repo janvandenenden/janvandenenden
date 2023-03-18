@@ -93,7 +93,7 @@ const ProjectCard = ({ projectInfo }) => {
               <Image
                 key={index}
                 src={item}
-                draggable={false}
+                draggable="false"
                 alt={`mockup of ${projectInfo.name}`}
                 width="200"
                 height="200"

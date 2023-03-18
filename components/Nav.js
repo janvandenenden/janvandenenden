@@ -1,4 +1,3 @@
-import { motion, AnimatePresence } from "framer-motion";
 import React, { useState, useRef } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
@@ -16,7 +15,7 @@ const Nav = () => {
           } uppercase mb-1 md:mb-3 `}
           href="/"
         >
-          Home
+          Jan Van den Enden
         </Link>
         <Link
           className={`${
@@ -28,7 +27,7 @@ const Nav = () => {
         >
           Projects
         </Link>
-        <Link
+        {/* <Link
           className={`${
             router.pathname == "/about-me"
               ? "line-through font-extrabold italic text-indigo-900 dark:text-indigo-600"
@@ -37,7 +36,7 @@ const Nav = () => {
           href="/about-me"
         >
           About me
-        </Link>
+        </Link> */}
       </nav>
     </>
   );

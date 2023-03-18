@@ -31,6 +31,27 @@ a {
     color: white;
     background: black;
   }
+  .bg {
+    background-image: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.8) 40%,
+        rgba(0, 0, 0, 0.7)
+      ),
+      url("../public/bg2.jpeg");
+    animation: panning 50s infinite linear;
+    background-size: cover;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .bg {
+    background-image: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0.9) 40%,
+        rgba(255, 255, 255, 0.8)
+      ),
+      url("../public/bg2.jpeg");
+  }
 }
 
 .next,
