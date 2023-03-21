@@ -10,6 +10,7 @@ import {
   SiReact,
   SiContentful,
   SiEthereum,
+  SiPython,
 } from "react-icons/si";
 
 const ProjectCard = ({ projectInfo }) => {
