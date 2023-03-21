@@ -8,10 +8,48 @@ const projects = [
   {
     name: "Mockup Mark",
     description:
-      "A SaaS apparel mockup generator that allows you to create and download high-quality apparel mockups right in your browser. Currently Mockup Mark has over 12k monthly users, coming from all corners of the world.",
+      "A SaaS apparel mockup generator with over 12k monthly users. It allows you to create and download high-quality apparel mockups right in your browser.",
     images: ["/mockup-mark.webp", "/mockup-mark-devices.webp"],
     url: "https://mockupmark.com",
     tools: ["React", "Next.js", "Bootstrap"],
+    tags: ["Co-founder", "Front-end", "UX", "SaaS", "SEO"],
+  },
+  {
+    name: "Yannick Joos",
+    description:
+      "A website with content management system integration for stand up comedian Yannick Joos.",
+    images: ["/yannick-joos.webp", "/yannick-joos-devices.webp"],
+    url: "https://yannickjoos.com",
+    tools: ["React", "Next.js", "Bootstrap", "Contentful"],
+    tags: ["UX / UI", "Front-end", "CMS", "Google Analytics"],
+  },
+  {
+    name: "Mintboost",
+    description:
+      "A service that optimizes an NFT project's allowlist. It uses blockchain data in a logistical regression model and determines the wallets' likelihoods of minting.",
+    images: ["/mintboost.webp", "/mintboost-devices.webp"],
+    url: "https://mintboost.ai",
+    tools: ["React", "Tailwind", "Ethereum", "Python"],
+    tags: ["UX / UI", "Front-end", "Data analytics"],
+  },
+  {
+    name: "NFT Refresh",
+    description:
+      "A website that lets you update the metadata of your ERC-721 collection on Opensea. It looks at the mint events to obtain the tokenIds of the NFT collection to subsequently update them using the Opensea API.",
+    images: ["/nftrefresh.webp", "/nftrefresh-device.webp"],
+    url: "https://www.nftrefresh.xyz/",
+    tools: ["React", "Next.js", "Tailwind", "Ethereum"],
+    tags: ["UX / UI", "Front-end", "API"],
+  },
+
+  {
+    name: "NFT Snapshot",
+    description:
+      "A website that lets you take trait specific snapshots of NFT token holders on the Ethereum and Polygon blockchain.",
+    images: ["/nftsnapshot.webp", "/nft-snapshot-devices.webp"],
+    url: "https://nftsnapshot.io",
+    tools: ["React", "Next.js", "Tailwind", "Ethereum"],
+    tags: ["UX / UI", "Front-end"],
   },
   {
     name: "Supermeme",
@@ -20,56 +58,30 @@ const projects = [
     images: ["/supermeme.webp", "/supermeme-devices.webp"],
     url: "https://supermeme.co",
     tools: ["React", "Bootstrap"],
+    tags: ["UX / UI", "Front-end"],
   },
-  {
-    name: "Mintboost",
-    description:
-      "Filter out wallets that are unlikely to convert and optimize your NFT project's allowlist.",
-    images: ["/mintboost.webp", "/mintboost-devices.webp"],
-    url: "https://mintboost.ai",
-    tools: ["React", "Tailwind", "Ethereum", "Python"],
-  },
-  {
-    name: "NFT Snapshot",
-    description:
-      "Take a snapshot of NFT token holders on the Ethereum and Polygon blockchain",
-    images: ["/nftsnapshot.webp", "/nft-snapshot-devices.webp"],
-    url: "https://nftsnapshot.io",
-    tools: ["React", "Next.js", "Tailwind", "Ethereum"],
-  },
-  {
-    name: "NFT Refresh",
-    description:
-      "Update the metadata of your whole ERC-721 collection on Opensea. It is built using Alchemy, Ethers and the Opensea API.",
-    images: ["/nftrefresh.webp", "/nftrefresh-device.webp"],
-    url: "https://www.nftrefresh.xyz/",
-    tools: ["React", "Next.js", "Tailwind", "Ethereum"],
-  },
+
   {
     name: "Rare Folk",
     description:
-      "Programmatically generated characters based on the ERC-721 standard on the Ethereum blockchain.",
+      "A website with mint experience for a web3 community that uses the ERC-721 standard on the Ethereum blockchain.",
     images: ["/rarefolk.webp", "/rarefolk-devices.webp"],
     url: "https://rarefolknft.com",
     tools: ["React", "Next.js", "Bootstrap", "Ethereum"],
-  },
-  {
-    name: "Yannick Joos",
-    description: "Website for stand up comedian Yannick Joos",
-    images: ["/yannick-joos.webp", "/yannick-joos-devices.webp"],
-    url: "https://yannickjoos.com",
-    tools: ["React", "Next.js", "Bootstrap"],
+    tags: ["UX / UI", "Front-end", "Community"],
   },
 ];
 
-export default function Portfolio() {
+export default function Projects() {
   const size = useWindowSize();
-
   return (
     <div className="overflow-hidden">
       <Head>
         <title>Jan Van den Enden | Projects</title>
-        <meta name="description" content="Website of Jan Van den Enden" />
+        <meta
+          name="description"
+          content="Hi! I'm Jan, a front-end developer based in Brussels, Belgium. Check out some of my projects!"
+        />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
