@@ -8,7 +8,7 @@ const TopNav = () => {
     <div className="flex container mx-auto justify-end items-center p-4">
       <Link
         href="/"
-        className="mr-auto text-xl font-extrabold hover:text-indigo-700 hover:dark:text-white"
+        className="mr-auto text-xl font-extrabold hover:text-indigo-700  hover:dark:text-indigo-500"
       >
         Jan Van den Enden
       </Link>
@@ -20,7 +20,7 @@ const TopNav = () => {
         rel="noreferrer"
         target="_blank"
         title="Github"
-        className="hover:text-indigo-700 hover:dark:text-white cursor-pointer dark:text-white rounded text-xl ml-6 "
+        className="hover:text-indigo-700  hover:dark:text-indigo-500 cursor-pointer  rounded text-xl ml-6 "
       >
         <DiGithubAlt className="text-4xl p-1" />
       </motion.a>
@@ -33,7 +33,7 @@ const TopNav = () => {
         rel="noreferrer"
         target="_blank"
         title="LinkedIn"
-        className="hover:text-indigo-700 hover:dark:text-white cursor-pointer dark:text-white rounded text-xl ml-6  "
+        className="hover:text-indigo-700  hover:dark:text-indigo-500 cursor-pointer  rounded text-xl ml-6  "
       >
         <FaLinkedinIn className="text-4xl p-2" />
       </motion.a>
