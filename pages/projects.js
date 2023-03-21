@@ -1,6 +1,5 @@
 import Head from "next/head";
 import { motion } from "framer-motion";
-import Nav from "../components/Nav";
 import useWindowSize from "../hooks/useWindowSize";
 import ProjectCard from "../components/ProjectCard";
 
@@ -94,18 +93,19 @@ export default function Projects() {
         <div className="container mx-auto h-full px-4">
           <div className="h-full w-full flex flex-col">
             <div className="w-full h-full my-auto overflow-hidden">
-              <div className="flex items-center justify-center overflow-hidden">
-                <motion.h1
+              <div className="flex items-center justify-center overflow-hidden text-center md:mb-12">
+                <motion.div
                   initial={{ y: "100vh" }}
                   animate={{ y: 0 }}
                   transition={{ duration: 1.5 }}
-                  className="text-5xl font-extrabold my-6 md:text-5xl lg:text-7xl xl:text-8xl"
                 >
-                  Projects
-                </motion.h1>
+                  <h1 className="text-5xl font-extrabold mb-3 md:text-5xl lg:text-7xl xl:text-8xl">
+                    Projects
+                  </h1>
+                </motion.div>
               </div>
 
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 md:gap-8 py-3 md:py-5">
+              <div className="grid md:grid-cols-12 md:gap-8 py-3 md:py-5">
                 {projects.map((project, index) => {
                   return <ProjectCard key={index} projectInfo={project} />;
                 })}
