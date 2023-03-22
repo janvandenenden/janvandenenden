@@ -86,7 +86,7 @@ const ProjectCard = ({ projectInfo }) => {
   };
   return (
     <motion.div
-      className={`card mb-4 bg-neutral-100 text-gray-900 dark:bg-gray-800 dark:text-white rounded-lg shadow-xl flex flex-col`}
+      className={`card mb-4 bg-neutral-100 text-gray-900 dark:bg-gray-800 dark:text-white rounded-lg shadow-xl flex flex-col md:col-span-6 lg:col-span-4`}
       whileHover={{ scale: 0.98 }}
       initial={{ scale: 1 }}
     >
