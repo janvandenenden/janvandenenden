@@ -6,7 +6,7 @@ export default function Document() {
       <Head>
         <meta
           name="description"
-          content="Hi! I'm Jan, a social scientist turned developer. I'm experienced in building customer-facing SaaS, websites and setting up lean business operations."
+          content="I'm Jan, a front-end developer based in Brussels, Belgium. I love to code creative and functional websites that scale and help projects go from zero to one using lean strategies."
         />
         <link rel="icon" href="/favicon.ico" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -17,24 +17,33 @@ export default function Document() {
         ></link>
         <meta
           name="twitter:title"
-          content="Jan Van den Enden - Digital Developer"
+          content="Jan Van den Enden | Digital Developer"
         />
         <meta
           name="twitter:description"
-          content="Hi! I'm Jan, a social scientist turned developer. I'm experienced in building customer-facing SaaS, websites and setting up lean business operations."
+          content="Hi! I'm Jan, a front-end developer based in Brussels, Belgium. I love to code creative and functional websites that scale and help projects go from zero to one using lean strategies."
         />
-        <meta name="twitter:image" content="" />
+        <meta
+          name="twitter:image"
+          content="https://janvandenenden.com/jan-twitter.jpg"
+        />
         <meta
           property="og:title"
           content="Jan Van den Enden | Digital Developer"
         />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="" />
-        <meta property="og:image" content="" />
-        <meta property="og:image:alt" content="" />
+        <meta property="og:url" content="https://janvandenenden.com" />
+        <meta
+          property="og:image"
+          content="https://janvandenenden.com/jan-og.jpg"
+        />
+        <meta
+          property="og:image:alt"
+          content="jan sitting at a desk with a laptop"
+        />
         <meta
           property="og:description"
-          content="Hi! I'm Jan, a social scientist turned developer. I'm experienced in building customer-facing SaaS, websites and setting up lean business operations."
+          content="Hi! I'm Jan, a front-end developer based in Brussels, Belgium. I love to code creative and functional websites that scale and help projects go from zero to one using lean strategies."
         />
       </Head>
       <body>
