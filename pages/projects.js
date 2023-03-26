@@ -73,15 +73,13 @@ const projects = [
 
 export default function Projects() {
   const size = useWindowSize();
+  <Head>
+    <title>Jan Van den Enden | Projects</title>
+  </Head>;
   return (
     <div className="overflow-hidden">
       <Head>
         <title>Jan Van den Enden | Projects</title>
-        <meta
-          name="description"
-          content="Hi! I'm Jan, a front-end developer based in Brussels, Belgium. Check out some of my projects!"
-        />
-        <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main

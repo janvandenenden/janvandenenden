@@ -13,10 +13,6 @@ export default function Home() {
     <div>
       <Head>
         <title>Jan Van den Enden | Digital Developer</title>
-        <meta
-          name="description"
-          content="Hi! I'm Jan, a front-end developer based in Brussels, Belgium. I love to code creative and functional websites that scale and help projects go from zero to one using lean strategies."
-        />
       </Head>
 
       <main
