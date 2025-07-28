@@ -6,7 +6,7 @@
 - I love to code creative and functional websites that scale and help projects go from zero to one using lean strategies.
 - I've co-founded [Mockup Mark](https://mockupmark.com), an apparel mockup generator with over 12k monthly users that allows you to create and download high-quality apparel mockups right in your browser.
 - I've been a coach at a web development bootcamp helping a diverse group of 25 learners gain the necessary soft and technical skills to land a first job in web development.
-- You can reach me on [jan@enden.be](mailto:jan@enden.be), [Twitter](https://twitter.com/JanVandenEnden) or [LinkedIn](https://www.linkedin.com/in/jan-van-den-enden-410b7820/). For more info, check out [my website](https://janvandenenden.com).
+- You can reach me on [jan@enden.be](mailto:jan@enden.be), [Twitter](https://twitter.com/JanVandenEnden) or [LinkedIn](https://www.linkedin.com/in/jan-van-den-enden-410b7820/).
 
 <h1>Things I code with</h1>  
 <p>
